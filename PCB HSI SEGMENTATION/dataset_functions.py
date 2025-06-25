@@ -264,7 +264,7 @@ import numpy as np
 import cv2
 from sklearn.decomposition import PCA
 
-'''def data_augmentation(hsi_cube, mask, alpha_min=0.9, alpha_max=1.1, b_prime=60):
+def data_augmentation(hsi_cube, mask, alpha_min=0.9, alpha_max=1.1, b_prime=60):
     np.random.seed(0)
     """
     Augments a hyperspectral cube and its corresponding mask with different
@@ -360,7 +360,7 @@ from sklearn.decomposition import PCA
     all_cubes = [hsi_cube] + augmented_cubes + [augmented_samples]
     all_masks = [mask] + augmented_masks + [mask]  # Use the original mask for PCA-augmented samples
 
-    return all_cubes, all_masks'''
+    return all_cubes, all_masks
 
 
 
@@ -370,7 +370,7 @@ from sklearn.decomposition import PCA
 
 
 
-def data_augmentation(hsi_cube, mask):
+'''def data_augmentation(hsi_cube, mask):
     np.random.seed(0)
     """
     Augments a hyperspectral cube and its corresponding mask with different
@@ -444,7 +444,7 @@ def data_augmentation(hsi_cube, mask):
     augmented_cubes.append(flipped_hsi)
     augmented_masks.append(flipped_mask)
 
-    return augmented_cubes, augmented_masks
+    return augmented_cubes, augmented_masks'''
 
 
 def evaluate_segmentation(ground_truth_masks, predicted_masks, num_classes):
